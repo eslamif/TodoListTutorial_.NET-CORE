@@ -9,6 +9,12 @@ using ToDoListTutorial.Models;
 
 namespace ToDoListTutorial.Controllers {
     public class HomeController : Controller {
+        private ToDoContext context;
+
+        public HomeController(ToDoContext context) {
+            this.context = context;
+        }
+
         public IActionResult Index() {
             return View();
         }
