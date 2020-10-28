@@ -26,7 +26,7 @@
             <div class="form-group">
                 <label>Due:</label>
 
-                <select name="due" class="form-control"
+                <select name="filter" class="form-control"
                         asp-items="@(new SelectList(Model.DueFilters, "Key", "Value", Model.Filters.Due))">
 
                     <option value="all">All</option>
@@ -36,8 +36,8 @@
             @* Status Filter *@
             <div class="form-group">
                 <label>Status:</label>
-
-                <select name="status" class="form-control"
+                
+                <select name="filter" class="form-control"
                         asp-items="@(new SelectList(Model.Statuses, "StatusId", "Name", Model.Filters.StatusId))">
 
                     <option value="all">All</option>
